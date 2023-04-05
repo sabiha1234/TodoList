@@ -10793,7 +10793,7 @@ textarea.form-control-lg {
   border: none;
 }
 
-.datec:focus {
+.datec:click {
   outline: none;
 }
 
