@@ -10797,8 +10797,4 @@ textarea.form-control-lg {
   outline: none;
 }
 
-input:checked + todotask {
-  background-color: rgb(255, 219, 152);
-}
-
 /*# sourceMappingURL=main.css.map */
