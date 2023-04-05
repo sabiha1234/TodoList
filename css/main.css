@@ -10780,4 +10780,21 @@ textarea.form-control-lg {
   border: 1px solid #fff;
 }
 
+.date {
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  border: 1px solid lightgray;
+}
+
+.in {
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+}
+
+.in:focus {
+  outline: none;
+}
+
 /*# sourceMappingURL=main.css.map */
