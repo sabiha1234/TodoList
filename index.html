@@ -48,7 +48,7 @@ t=x +":" + min + ":" + sec + " AM " + day + ", " + month + " " + d.getDate();
     
    //alert(t);
    var txt = document.getElementById('todotask').innerHTML;
-   txt+="<hr><div class='d-flex mx-4'><div><input type='checkbox' class='form-check-input me-4'></div><div> <p class='mb-0'><b>" + taskname + "</b><br>" + description + "</p><p class='text-danger mb-0'>" + t  + "</p></div></div></p>";
+   txt+="<hr><div class='d-flex mx-4'><div><input type='checkbox' class='form-check-input me-4' onclick='bg()'></div><div id='bg1'> <p class='mb-0'><b>" + taskname + "</b><br>" + description + "</p><p class='text-danger mb-0'>" + t  + "</p></div></div></p>";
    document.getElementById('todotask').innerHTML = txt;
 
    document.getElementById('taskname').value="";
@@ -57,6 +57,13 @@ t=x +":" + min + ":" + sec + " AM " + day + ", " + month + " " + d.getDate();
 
 }
 
+function bg()
+{
+     //alert('bhg');
+    //document.body.style.backgroundColor = "red";
+    document.getElementById('bg1').style.backgroundColor = "#ffd589";
+
+}
     </script>
   
 </head>
@@ -95,7 +102,7 @@ t=x +":" + min + ":" + sec + " AM " + day + ", " + month + " " + d.getDate();
                 <div class="col-md-5 m-3">
                     <input class="form-control mb-2 br" type="text" id="taskname" placeholder="Task name here">
                     <input class="form-control mb-2 br" type="text" id="description" placeholder="Description">
-                    <input type="type" onfocus="(this.type='datetime-local')" id="duedate" class="date" placeholder="Due Date">
+                    <input type="type" onfocus="(this.type='datetime-local')" id="duedate" class="datechange" placeholder="Due Date">
                 </div>
 
                  <div class="col-md-5">

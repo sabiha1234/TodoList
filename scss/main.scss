@@ -4,7 +4,7 @@ $theme-colors: (
   "secondary":  gray,
   "success":    green,
   "info":       blue,
-  "warning":    pink,
+  "warning":    orange,
   "danger":     red,
   "light":      white,
   "dark":       #ffe69c
@@ -33,19 +33,24 @@ $input-focus-box-shadow: white;
     border: 1px solid #fff;
 }
 
-.date {
-    padding: 10px;
+.datechange {
+    padding: 9px 45px;
     border-radius: 8px;
     margin-top: 10px;
     border: 1px solid lightgray;
 }
 
-.in{
+.datec
+{
     padding: 10px;
     margin-top: 10px;
     border: none;
 }
 
-.in:focus{
+.datec:focus{
     outline: none;
+}
+
+input:checked + todotask{
+    background-color: rgb(255, 219, 152);
 }

@@ -33,7 +33,7 @@
   --bs-secondary: gray;
   --bs-success: green;
   --bs-info: blue;
-  --bs-warning: pink;
+  --bs-warning: orange;
   --bs-danger: red;
   --bs-light: white;
   --bs-dark: #ffe69c;
@@ -41,7 +41,7 @@
   --bs-secondary-rgb: 128, 128, 128;
   --bs-success-rgb: 0, 128, 0;
   --bs-info-rgb: 0, 0, 255;
-  --bs-warning-rgb: 255, 192, 203;
+  --bs-warning-rgb: 255, 165, 0;
   --bs-danger-rgb: 255, 0, 0;
   --bs-light-rgb: 255, 255, 255;
   --bs-dark-rgb: 255, 230, 156;
@@ -2871,19 +2871,19 @@ textarea.form-control-lg {
 
 .btn-warning {
   --bs-btn-color: #000;
-  --bs-btn-bg: pink;
-  --bs-btn-border-color: pink;
+  --bs-btn-bg: orange;
+  --bs-btn-border-color: orange;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #ffc9d3;
-  --bs-btn-hover-border-color: #ffc6d0;
-  --bs-btn-focus-shadow-rgb: 217, 163, 173;
+  --bs-btn-hover-bg: #ffb326;
+  --bs-btn-hover-border-color: #ffae1a;
+  --bs-btn-focus-shadow-rgb: 217, 140, 0;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #ffcdd5;
-  --bs-btn-active-border-color: #ffc6d0;
+  --bs-btn-active-bg: #ffb733;
+  --bs-btn-active-border-color: #ffae1a;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: pink;
-  --bs-btn-disabled-border-color: pink;
+  --bs-btn-disabled-bg: orange;
+  --bs-btn-disabled-border-color: orange;
 }
 
 .btn-danger {
@@ -3006,19 +3006,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-warning {
-  --bs-btn-color: pink;
-  --bs-btn-border-color: pink;
+  --bs-btn-color: orange;
+  --bs-btn-border-color: orange;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: pink;
-  --bs-btn-hover-border-color: pink;
-  --bs-btn-focus-shadow-rgb: 255, 192, 203;
+  --bs-btn-hover-bg: orange;
+  --bs-btn-hover-border-color: orange;
+  --bs-btn-focus-shadow-rgb: 255, 165, 0;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: pink;
-  --bs-btn-active-border-color: pink;
+  --bs-btn-active-bg: orange;
+  --bs-btn-active-border-color: orange;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: pink;
+  --bs-btn-disabled-color: orange;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: pink;
+  --bs-btn-disabled-border-color: orange;
   --bs-gradient: none;
 }
 
@@ -4650,12 +4650,12 @@ textarea.form-control-lg {
 }
 
 .alert-warning {
-  --bs-alert-color: #664d51;
-  --bs-alert-bg: #fff2f5;
-  --bs-alert-border-color: #ffecef;
+  --bs-alert-color: #664200;
+  --bs-alert-bg: #ffedcc;
+  --bs-alert-border-color: #ffe4b3;
 }
 .alert-warning .alert-link {
-  color: #523e41;
+  color: #523500;
 }
 
 .alert-danger {
@@ -5034,17 +5034,17 @@ textarea.form-control-lg {
 }
 
 .list-group-item-warning {
-  color: #664d51;
-  background-color: #fff2f5;
+  color: #664200;
+  background-color: #ffedcc;
 }
 .list-group-item-warning.list-group-item-action:hover, .list-group-item-warning.list-group-item-action:focus {
-  color: #664d51;
-  background-color: #e6dadd;
+  color: #664200;
+  background-color: #e6d5b8;
 }
 .list-group-item-warning.list-group-item-action.active {
   color: #fff;
-  background-color: #664d51;
-  border-color: #664d51;
+  background-color: #664200;
+  border-color: #664200;
 }
 
 .list-group-item-danger {
@@ -6627,7 +6627,7 @@ textarea.form-control-lg {
 
 .text-bg-warning {
   color: #000 !important;
-  background-color: RGBA(255, 192, 203, var(--bs-bg-opacity, 1)) !important;
+  background-color: RGBA(255, 165, 0, var(--bs-bg-opacity, 1)) !important;
 }
 
 .text-bg-danger {
@@ -6674,10 +6674,10 @@ textarea.form-control-lg {
 }
 
 .link-warning {
-  color: pink !important;
+  color: orange !important;
 }
 .link-warning:hover, .link-warning:focus {
-  color: #ffcdd5 !important;
+  color: #ffb733 !important;
 }
 
 .link-danger {
@@ -10780,21 +10780,25 @@ textarea.form-control-lg {
   border: 1px solid #fff;
 }
 
-.date {
-  padding: 10px;
+.datechange {
+  padding: 9px 45px;
   border-radius: 8px;
   margin-top: 10px;
   border: 1px solid lightgray;
 }
 
-.in {
+.datec {
   padding: 10px;
   margin-top: 10px;
   border: none;
 }
 
-.in:focus {
+.datec:focus {
   outline: none;
+}
+
+input:checked + todotask {
+  background-color: rgb(255, 219, 152);
 }
 
 /*# sourceMappingURL=main.css.map */
