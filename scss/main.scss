@@ -1,0 +1,34 @@
+
+$theme-colors: (
+  "primary":    blueviolet,
+  "secondary":  gray,
+  "success":    green,
+  "info":       blue,
+  "warning":    pink,
+  "danger":     red,
+  "light":      white,
+  "dark":       #ffe69c
+);
+
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+$input-border-color: white;
+$input-focus-border-color: white; 
+$input-focus-box-shadow: rgb(255, 255, 255);
+$input-focus-box-shadow: white;
+
+
+.btn1
+{
+    right: 0;
+    bottom: 0;
+    margin-top: 100px;
+    float: right;
+}
+
+.br
+{
+    border: 1px solid #fff;
+}
