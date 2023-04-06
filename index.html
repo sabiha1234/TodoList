@@ -9,10 +9,26 @@
     <script>
 
 
+var divno=1;
+var presentdiv=1; 
+var totaldiv=0;
+
+const checkboxes = [];
+checkboxes[0]="";
+checkboxes[1]="";
+checkboxes[2]="";
+checkboxes[3]="";
+checkboxes[4]="";
+checkboxes[5]="";
+checkboxes[6]="";
+checkboxes[7]="";
+checkboxes[8]="";
+checkboxes[9]="";
+checkboxes[10]="";
+
 
 function addtask()
 {
-
    document.getElementById('todonothing').innerHTML="";
 
    taskname = document.getElementById('taskname').value;
@@ -20,50 +36,69 @@ function addtask()
    duedate = document.getElementById('duedate').value;
    const d = new Date(duedate);
 
-const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
-let day = weekday[d.getDay()];
+    let day = weekday[d.getDay()];
 
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-let month = months[d.getMonth()];
-
-
-var min=d.getMinutes();
-if(min<10) min = "0" + min;
-
-var sec=d.getSeconds();
-if(sec<10) sec = "0" + sec;
+    let month = months[d.getMonth()];
 
 
-x=d.getHours();
-t="";
-if(x>12) 
-t=(x-12) +":" + min + ":" + sec + " PM " + day + ", " + month + " " + d.getDate();
-else
-t=x +":" + min + ":" + sec + " AM " + day + ", " + month + " " + d.getDate();
+    var min=d.getMinutes();
+    if(min<10) min = "0" + min;
+
+    var sec=d.getSeconds();
+    if(sec<10) sec = "0" + sec;
+
+
+    x=d.getHours();
+    t="";
+    if(x>12) 
+    t=(x-12) +":" + min + ":" + sec + " PM " + day + ", " + month + " " + d.getDate();
+    else
+    t=x +":" + min + ":" + sec + " AM " + day + ", " + month + " " + d.getDate();
 
 
    //string Date = datePicker1.SelectedDate.Value.ToString("dd-MMM-yyyy");
     
    //alert(t);
    var txt = document.getElementById('todotask').innerHTML;
-   txt+="<hr><div class='d-flex mx-4'><div><input type='checkbox' class='form-check-input me-4' onclick='bg()'></div><div id='bg1'> <p class='mb-0'><b>" + taskname + "</b><br>" + description + "</p><p class='text-danger mb-0'>" + t  + "</p></div></div></p>";
+   var divid = "bg"+divno;
+   var checkid = "chk"+divno;
+   txt+="<hr><div class='d-flex mx-4'><div><input type='checkbox' id='"+ checkid +"' class='form-check-input me-4' onclick='bg("+divno+")'></div><div id='"+divid+"'> <p class='mb-0'><b>" + taskname + "</b><br>" + description + "</p><p class='text-danger mb-0'>" + t  + "</p></div></div></p>";
+   divno++; totaldiv++; 
    document.getElementById('todotask').innerHTML = txt;
 
    document.getElementById('taskname').value="";
    document.getElementById('description').value="";
    document.getElementById('duedate').value="";
 
+   keepselection();
+
 }
 
-function bg()
+function bg(divno)
 {
+    var divid= "bg"+divno;
+    document.getElementById(divid).style.backgroundColor = "#ffd589";
+    checkboxes[divno]='Yes';
+    keepselection();
+}
 
-    //document.getElementById('bg1').style.backgroundColor = "#ffd589";
+function keepselection()
+{
+  for(i=0;i<=10;i++)
+  {
+    if(checkboxes[i]=='Yes')
+    {  
+        var checkboxid="chk"+i;
+        document.getElementById(checkboxid).checked = true;
+    }
+  }
 
 }
-    </script>
+</script>
   
 </head>
 <body class="bg-dark">
